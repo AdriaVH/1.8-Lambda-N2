@@ -7,9 +7,9 @@ public interface ListModifier {
     static List<Object> replaceText (List<Object> list, String toReplace, String replacer) {
         return list.stream().map( x -> x.toString().contains(toReplace) ?
                 x.toString().replace(toReplace, replacer) : x)
-                .collect(Collectors.toList());
+                .toList();
     }
     static List<Object> showElementsWithNumbers (List<Object> list){
-        return list.stream().filter(x -> x.getClass()== "x".getClass() ? x.contain );
+        return list.stream().filter(x -> x.toString().matches(".*\\d.*") ).toList();
     }
 }

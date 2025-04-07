@@ -10,5 +10,9 @@ public interface ListFilter extends Stream {
     static List<String> filterByLength (List<String> list, int length) {
         return  list.stream().filter( s -> s.length() == length).toList();
     }
+    static List<String> filterByFirstLetterAndLength (List<String> list, char toFilter, int length) {
+        return  list.stream().filter( s -> (s.charAt(0) == toFilter & s.length() == length)).toList();
+    }
+
 
 }

@@ -13,6 +13,9 @@ public class Main {
         List<String> names = new ArrayList<>(Arrays.asList(
                 "Joan", "Maria", "Pere", "Aina", "Carlos", "Ana"));
         ListFilter.filterByFirstLetter(names, 'A');
+        ListFilter.filterByLength(names, 3);
+        System.out.println(ListFilter.filterByFirstLetterAndLength(names, 'A', 3));
+
 
         System.out.println("Ex2");
         List<Integer> intList = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
@@ -28,8 +31,12 @@ public class Main {
 
         System.out.println("Ex4");
         System.out.println(OrderList.alphaFirstLetter(mixedList));
+        System.out.println(OrderList.alphaAllString(mixedList));
+
         System.out.println(OrderList.firstStringsContaining(mixedList,"e"));
+
         System.out.println(ListModifier.replaceText(mixedList, "a", "4"));
 
+        System.out.println(ListModifier.showElementsWithNumbers(mixedList));
     }
 }
